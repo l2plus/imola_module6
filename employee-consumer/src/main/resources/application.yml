@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: employee-consumer
+
+server:
+  port: 8085
+
+employee:
+  producer:
+    service:
+      name: employee-producer
+      baseurl: /employee
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8083/eureka
+    healthcheck:
+      enabled: true
