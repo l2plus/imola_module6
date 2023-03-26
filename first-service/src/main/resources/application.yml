@@ -10,3 +10,12 @@ eureka:
       defaultZone: http://localhost:8671/eureka
     healthcheck:
       enabled: true
+
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: "*"
